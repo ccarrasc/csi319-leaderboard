@@ -1,30 +1,67 @@
 [
 	{
 		"url": "https://play.google.com/store/apps/details?id=com.machinemode.lwp.spookypooky",
+		"repoUrl": "https://github.com/cesar-carrasco/halloween-lwp",
 		"author": "Cesar"
 	},
 	{
 		"url": "https://play.google.com/store/apps/details?id=com.writewrecked.drinkability",
+		"repoUrl": "https://github.com/joshuaegclark/DrinkabilityTimer",
 		"author": "Josh C."
 	},
 	{
 		"url": "https://play.google.com/store/apps/details?id=com.cl0ckw0rk.english2farts",
+		"repoUrl": "https://github.com/JoshuaBing/English2Farts",
 		"author": "Josh B."
 	},
 	{
 		"url": "https://play.google.com/store/apps/details?id=codekappa.phonemanager",
+		"repoUrl": "https://github.com/benjamin-wilson/PhoneManager",
 		"author": "Ben"
 	},
 	{
 		"url": "https://play.google.com/store/apps/details?id=com.safedriver",
+		"repoUrl": "https://github.com/tiny1600/SafeDriving/",
 		"author": "Douglas"
 	},
 	{
 		"url": "https://play.google.com/store/apps/details?id=com.jdeebs.string",
+		"repoUrl": "https://github.com/jdebernardis/string-theory",
 		"author": "Justin"
 	},
 	{
 		"url": "https://play.google.com/store/apps/details?id=com.atsara.lwp",
+		"repoUrl": "https://github.com/AtsaraZiggy/ship",
 		"author": "Zigmyal"
+	},
+	{
+		"url": "https://play.google.com/store/apps/details?id=example.fortunecookiewisdom&hl=en",
+		"repoUrl": "https://github.com/michael-fredrickson/FortuneCookieWisdom/",
+		"author": "Michael"
+	},
+	{
+		"url": "https://play.google.com/store/apps/details?id=edu.champlain.pokemonivcalculator&hl=en",
+		"repoUrl": "https://github.com/xSasuke11x/Pokemon-IV-Calculator",
+		"author": "Kennedy"
+	},
+	{
+		"url": "https://play.google.com/store/apps/details?id=com.hearthstone.secretsnomore",
+		"repoUrl": "",
+		"author": "Ian"
+	},
+	{
+		"url": "",
+		"repoUrl": "",
+		"author": "Chris"
+	},
+	{
+		"url": "",
+		"repoUrl": "",
+		"author": "Scott"
+	},
+	{
+		"url": "",
+		"repoUrl": "",
+		"author": "Vasily"
 	}
 ]
