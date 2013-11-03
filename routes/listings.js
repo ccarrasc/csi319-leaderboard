@@ -1,7 +1,7 @@
 /**
- * New node file
+ * Listings API
  */
-var https = require('https');
+
 var rest = require('restler');
 var cheerio = require('cheerio');
 var async = require('async');
@@ -20,7 +20,6 @@ var getAppListing = function(app, callback) {
 
 
 exports.list = function(req, res) {
-	
 	async.eachSeries(apps, getAppListing, function(err){
 		if(err) {
 			console.log(err);
