@@ -14,6 +14,7 @@ var getAppListing = function(app, callback) {
 		app.title = $(".document-title[itemprop='name']").text().trim();
 		app.developerName = $(".document-subtitle.primary[itemprop='name']").text().trim();
 		app.numberOfInstalls = $(".content[itemprop='numDownloads']").text().trim().split(" ")[0];
+		app.imageUrl = $(".cover-image[itemprop='image']").attr('src');
 		callback();
 	});    
 };
@@ -24,6 +25,7 @@ exports.list = function(req, res) {
 		if(err) {
 			console.log(err);
 		}
+		//res.set('Cache-Control', 'max-age=3600');
 		res.json(apps);
 	});
 };
