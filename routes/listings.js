@@ -13,7 +13,7 @@ var getAppListing = function(app, callback) {
 		$ = cheerio.load(result);		
 		app.title = $(".document-title[itemprop='name']").text().trim();
 		app.developerName = $(".document-subtitle.primary[itemprop='name']").text().trim();
-		app.numberOfInstalls = $(".content[itemprop='numDownloads']").text().trim().split(" ")[0];
+		app.numberOfInstalls = $(".content[itemprop='numDownloads']").text().trim().split(" ")[0].replace(/,/g,'');
 		app.imageUrl = $(".cover-image[itemprop='image']").attr('src');
 		callback();
 	});    
