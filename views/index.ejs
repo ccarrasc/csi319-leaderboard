@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%- title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+	    $.ajax({
+	    	type: 'POST',
+	    	url: '/listings',
+	    	dataType: 'json',
+	    	})
+	    	.done(function(data) {
+	    		alert(JSON.stringify(data));
+	    	});
+    </script>
+  </head>
+  <body>
+	Stuff
+  </body>
+</html>
