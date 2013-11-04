@@ -22,7 +22,7 @@ var getAppListing = function(app, callback) {
 			case "www.amazon.com":
 				app.title = $("#btAsinTitle").text().trim();
 				app.developerName = $(".buying > span > a").text().trim();
-				app.numberOfInstalls = '?';
+				app.numberOfInstalls = 0;
 				app.imageUrl = $("#prodImage").attr('src');
 				break;
 			default:

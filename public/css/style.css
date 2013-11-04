@@ -6,3 +6,53 @@ body {
 a {
   color: #00B7FF;
 }
+
+.container {
+	max-width: 1170px;
+	margin-right: auto;
+	margin-left: auto;
+	
+}
+
+.appIcon {
+	width: 25%;
+	max-width: 120px;
+	min-width: 60px;
+}
+
+.appIcon .glyphicon {
+	font-size: 2em;
+	display: block;
+}
+
+.appIcon img {
+	padding: 10px 15% 10px 10px;
+	
+}
+
+.list-group {
+	list-style-type: none;
+}
+
+.list-group .badge {
+	float: right;
+	font-size: 2em;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding: 10px;
+}
+
+
+li a{
+	padding: 2%;
+	margin: 2%;
+	background-color: #ccc;
+	display: block;
+	overflow: auto;
+}
+
+
+li a:hover {
+	background-color: #999;
+	text-decoration: none;
+}
