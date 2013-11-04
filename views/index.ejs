@@ -2,16 +2,27 @@
   <head>
     <title><%- title %></title>
     <link rel='stylesheet' href='css/style.css'>
+    <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="js/bootstrap.min.js"></script>
     <script type="text/javascript">
+    	$(function() {
+    		$('#progressbar').progressbar({
+    			value: false
+    		});
+    	});
+    	
 	    $.ajax({
 	    	type: 'POST',
 	    	url: '/listings',
 	    	dataType: 'json',
 	    	})
 	    	.done(function(data) {
+	    		$('#progressbar').progressbar('disable');
+	    		$('#progressbar').slideUp();
+	    		
 	    		//alert(JSON.stringify(data));
 	    		var results ="";
 	    		var resultsArray = [];
@@ -58,6 +69,7 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<h2>App 1</h2>
+				<div id="progressbar"></div>
 				<ul class="list-group" id="leaderboard">
 				<!--  Content appended here -->
 				</ul>
