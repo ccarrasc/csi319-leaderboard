@@ -4,7 +4,7 @@
     <link rel='stylesheet' href='css/style.css'>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery-2.0.3.min.js"></script>
-    <script type="js/bootstrap-responsive.js"></script>
+    <script type="js/bootstrap.min.js"></script>
     <script type="text/javascript">
 	    $.ajax({
 	    	type: 'POST',
@@ -16,17 +16,16 @@
 	    		var results ="";
 	    		var resultsArray = [];
 	    		
-	    		//sort alphabetically by App Name 
-	    		data.sort(function(a, b){
-	    	
+	    		//sort numerically, descending
+	    		data.sort(function(a,b){	
+	    			if(b.numberOfInstalls == a.numberOfInstalls){
+	    				//sort by title
 	    				if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
 	    		    	if (b.title.toLowerCase() < a.title.toLowerCase()) return 1;
 	    		    	return 0;
-	    		});
-	    		
-	    		//sort numerically, descending
-	    		data.sort(function(a,b){
-	    			return b.numberOfInstalls - a.numberOfInstalls;
+	    			}else{
+	    				return b.numberOfInstalls - a.numberOfInstalls;
+	    			}	    		
 	    		});
 	    		
 	    		$(data).each(function(index,element) {
@@ -36,7 +35,7 @@
 	    			if(appIcon){
 	    				appIcon = '<img src="' + appIcon  + '" class="pull-left" />';
 	    			}else{
-	    				appIcon = '<span class="glyphicon glyphicon-picture"></span> ';
+	    				appIcon = '<span><!-- default --></span> ';
 	    			}
 	    			
 	    			results += '<li class="list-group-item clearfix"><a href="' + element.url + '">';
@@ -44,33 +43,31 @@
 	    			results += '<div class="appIcon">' + appIcon + '</div>';
 	    			results += '<h3>' + element.title + '</h3>';
 	    			results += '<p>' + element.developerName + ' (' + element.author + ')</p>';
-	    			results += '</a></li>'; 			
-	    			
+	    			results += '</a></li>'; 			    			
 	    		});
 	    		
 	    		$('#leaderboard').append(results);		    		
 	    	});
     </script>
   </head>
-  <body>
-  	
-	<div class="container row-fluid">
-	<div class="hero-unit"><h1>CSI-319 Leader Board</h1></div>
-		<div class="span12">
-			<div class="row-fluid">
-				<div class="span6">
+  <body>	
+	<div class="container">
+		<div class="jumbotron">
+			<h1>CSI-319 Leader Board</h1>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
 				<h2>App 1</h2>
 				<ul class="list-group" id="leaderboard">
 				<!--  Content appended here -->
 				</ul>
-				</div>
+			</div>
 				
-				<div class="span6">
+			<div class="col-lg-6">
 				<h2>App 2</h2>
-				<ul class="list-group" id="leaderboard">
+				<ul class="list-group" id="leaderboard2">
 				<!--  Content appended here -->
 				</ul>
-				</div>
 			</div>
 		</div>
 	</div>
