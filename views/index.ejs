@@ -29,11 +29,9 @@
 	    		
 	    		//sort numerically, descending
 	    		data.sort(function(a,b){	
-	    			if(b.numberOfInstalls == a.numberOfInstalls){
-	    				//sort by title
-	    				if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
-	    		    	if (b.title.toLowerCase() < a.title.toLowerCase()) return 1;
-	    		    	return 0;
+	    			if(b.numberOfInstalls === a.numberOfInstalls){
+	    		    	//sort by title
+	    				return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
 	    			}else{
 	    				return b.numberOfInstalls - a.numberOfInstalls;
 	    			}	    		
